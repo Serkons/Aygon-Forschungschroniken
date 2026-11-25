@@ -1,0 +1,10 @@
+AYGON FORSCHUNGSCHRONIKEN – HÖRSPIELPROBE
+
+1. ZIP entpacken.
+2. index.html im Firefox öffnen.
+3. „Hörspielprobe öffnen“ wählen, dann „Vorlesen“.
+4. Mit „Rollenstimmen einstellen“ die deutschen Stimmen für die Figuren zuweisen.
+
+Der Hörspielmodus verwendet lokal verfügbare Browser-Stimmen, keine fertigen MP3-Dateien und keine OpenAI-/ElevenLabs-API. Verschiedene Stimmen sind nur verfügbar, wenn sie in Firefox gemeldet werden. Tonhöhe und Sprechtempo variieren pro Rolle. Die Geschichte ist eine Stimmprobe, kein neues Forschungsergebnis.
+
+Casper bleibt weiterhin außerhalb der Geschichte.

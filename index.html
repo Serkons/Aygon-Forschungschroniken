@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#102029">
+<meta name="description" content="Aygon-Forschungschroniken: interaktives Offline-Bilderbuch, Band I Prolog.">
+<title>Aygon-Forschungschroniken · Hörspielprobe</title>
+<style>
+:root{color-scheme:dark;--bg:#0e1319;--panel:#19232a;--panel2:#223039;--edge:#5b716d;--text:#f4eedc;--muted:#b0b7ac;--gold:#dfb979;--glow:#8fd6c5;--paper:#e5d3ad;--ink:#382e28;--font-scale:1}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 10% 0%,#183f42 0,transparent 42%),radial-gradient(ellipse at 95% 20%,#3b2e28 0,transparent 45%),#0b1117;color:var(--text);font:16px/1.65 system-ui,-apple-system,"Segoe UI",Arial,sans-serif}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.22;background-image:repeating-linear-gradient(0deg,transparent 0,transparent 39px,#69817b11 40px),repeating-linear-gradient(90deg,transparent 0,transparent 39px,#69817b11 40px)}
+button{font:inherit;cursor:pointer;color:inherit}button:focus-visible{outline:3px solid var(--glow);outline-offset:3px}
+a{color:var(--glow)}.top{position:sticky;top:0;z-index:20;background:#10191feD;border-bottom:1px solid #5f716d66;backdrop-filter:blur(18px)}.top-inner{max-width:1220px;margin:auto;display:flex;gap:14px;align-items:center;justify-content:space-between;padding:12px 20px;flex-wrap:wrap}.brand{display:flex;align-items:center;gap:12px}.brand-symbol{display:grid;place-items:center;border:2px solid #b2a176;background:linear-gradient(135deg,#234246,#162329);border-radius:10px;width:42px;height:42px;font-size:24px;box-shadow:0 0 17px #78dfbf20}.brand strong{display:block;font-size:14px;letter-spacing:.14em;color:#ead1a5}.brand small{display:block;color:#92b5ad;font-size:10px;letter-spacing:.19em}.tools{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.tool{background:#22343a;border:1px solid #54706b;border-radius:9px;padding:7px 11px;font-size:13px}.tool:hover,.tool.active{background:#305651;border-color:#83bcab}.tool.primary{background:#385e56;color:white;border-color:#8ad4b5}
+.progress{height:3px;background:#263831}.progress > div{height:100%;width:0;background:linear-gradient(90deg,#e0b87b,#88e1cf);transition:width .25s}
+.shell{max-width:1140px;margin:36px auto 100px;padding:0 18px}.book{border:1px solid #6e7056;border-radius:18px;background:linear-gradient(150deg,#26353b,#17242b 46%,#18232a);padding:12px;box-shadow:0 22px 70px #0008,0 0 0 5px #101a20;position:relative}.book:before{content:"";position:absolute;inset:18px;border:1px solid #a88f5b36;border-radius:11px;pointer-events:none}.book-page{background:radial-gradient(circle at 90% 0%,#f0e2c4,#e1ceaa 65%,#d1bb98);border:1px solid #ad956e;min-height:620px;border-radius:10px;color:var(--ink);padding:clamp(23px,4vw,54px);box-shadow:inset 0 0 40px #9e784434}.book-page:before{content:"";position:absolute;inset:25px;pointer-events:none;border:1px solid #5e533b18;border-radius:7px}
+.eyebrow{color:#5b716c;letter-spacing:.16em;font-size:12px;text-transform:uppercase;font-weight:750}.chapter-title{font-family:Georgia,"Times New Roman",serif;color:#263a3c;line-height:1.15;font-size:clamp(29px,4.5vw,48px);margin:10px 0}.subtitle{font-family:Georgia,"Times New Roman",serif;font-style:italic;font-size:19px;color:#76654e;margin:0 0 24px}.ornament{display:flex;align-items:center;gap:12px;color:#8b7653;margin:14px 0 26px}.ornament:before,.ornament:after{content:"";height:1px;background:#a8936d;flex:1}.narration{font-family:Georgia,"Times New Roman",serif;font-style:italic;color:#5e4d3d;font-size:calc(17px * var(--font-scale));line-height:1.8;margin:22px 0}.dialogue{display:grid;grid-template-columns:90px 1fr;gap:18px;align-items:start;margin:20px 0;padding:15px;background:linear-gradient(100deg,#ffffff89,#ffffff55);border:1px solid #bca782;border-radius:13px;box-shadow:0 5px 0 #b2a17f22}.portrait{width:90px;aspect-ratio:1;display:block;object-fit:cover;border:3px solid #846c51;border-radius:9px;box-shadow:0 4px 10px #0004;background:#363c40;transition:transform .18s ease}.portrait-button{border:0;padding:0;background:transparent}.portrait-button:hover .portrait{transform:scale(1.03)}.speaker{font-size:13px;letter-spacing:.07em;text-transform:uppercase;font-weight:800;color:#48645f;padding:0 0 5px;border-bottom:1px solid #aa957b55;margin-bottom:8px}.speech{font-size:calc(16px * var(--font-scale));line-height:1.6}.speech p{margin:6px 0 8px}.speech p:last-child{margin-bottom:0}.finish{text-align:center;font-family:Georgia,serif;font-size:23px;color:#6f5940;margin:35px 0 4px;font-weight:700}
+.page-foot{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-top:34px;padding-top:15px;border-top:1px solid #ab946e;color:#77674b;font-size:12px}.leaf-nav{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:18px 6px 4px}.leaf-nav button,.big-button{padding:11px 20px;border-radius:9px;border:1px solid #83b7a4;background:#315b54;font-weight:700}.leaf-nav button:hover,.big-button:hover{background:#457469}.leaf-nav button:disabled{opacity:.38;cursor:not-allowed}.page-count{color:#d8c5a3;font-size:13px;letter-spacing:.07em}
+.cover{display:grid;place-items:center;text-align:center;min-height:540px}.cover-mark{font-size:45px;color:#5c8f85;margin-bottom:8px}.cover h1{font:700 clamp(39px,6vw,76px)/1.08 Georgia,serif;letter-spacing:-.025em;color:#2d4445;margin:8px 0}.cover .cover-sub{font:italic 22px Georgia,serif;color:#665844}.cover .deck{max-width:600px;margin:20px auto 32px;font-size:16px;line-height:1.8;color:#594b3c}.cover .ribbon{border:1px solid #aa9570;border-radius:999px;color:#75664d;padding:6px 20px;font-weight:bold;font-size:12px;letter-spacing:.1em;display:inline-block}.cover .big-button{background:#335e55;color:#fff;border:0}.cover .big-button:hover{background:#48776c}.cover .small{display:block;margin-top:22px;color:#86775b;font-size:12px}
+.dialog-overlay{position:fixed;inset:0;background:#041014dA;z-index:40;display:none;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(8px)}.dialog-overlay.open{display:flex}.modal{position:relative;background:#1c292f;border:1px solid #8b977c;border-radius:15px;max-width:900px;max-height:90vh;width:min(100%,900px);overflow-y:auto;padding:25px;box-shadow:0 20px 80px #000}.modal h2{font:28px Georgia,serif;color:#ebd2a3;margin:0 0 12px}.close{position:absolute;right:17px;top:13px;border:1px solid #5d8275;border-radius:7px;background:#273c41;padding:5px 11px}.index-list{display:grid;gap:9px}.index-item{display:flex;gap:12px;align-items:center;text-align:left;padding:14px;background:#23343a;border:1px solid #436359;border-radius:9px}.index-item:hover{background:#34534e}.index-num{background:#41685e;color:#fff;border-radius:6px;padding:4px 10px}.index-item small{display:block;color:#b6bfba}.cast-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}.cast-grid .cast-card{background:#263940;padding:12px;border:1px solid #4d6962;border-radius:11px}.cast-grid img{width:100%;border-radius:7px;aspect-ratio:1;object-fit:cover}.cast-grid strong{display:block;text-align:center;margin:7px 0;color:#e5ce9e}.lightbox{max-width:650px;text-align:center}.lightbox img{width:100%;max-height:76vh;object-fit:contain;border-radius:10px}.lightbox p{margin:10px 0 0;color:#e6d4ae}
+.view-text .portrait-button{display:none}.view-text .dialogue{grid-template-columns:1fr}
+@media(max-width:700px){.shell{margin-top:15px;padding:0 9px}.book{padding:7px}.book-page{min-height:500px;padding:22px 15px}.book-page:before{inset:13px}.dialogue{grid-template-columns:65px 1fr;gap:12px;padding:10px}.portrait{width:65px}.speaker{font-size:12px}.narration{font-size:calc(15px * var(--font-scale))}.speech{font-size:calc(15px * var(--font-scale))}.top-inner{padding:10px}.tools{gap:5px}.tool{padding:6px 8px}.cast-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.leaf-nav button{padding:9px 12px}.cover{min-height:430px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important}}
+
+/* Ausgabe 2: gut erkennbare Namensschilder, mehr Raum fuer Gesichter */
+.dialogue{grid-template-columns:252px minmax(0,1fr);gap:22px;padding:18px;margin:23px 0}
+.portrait{width:252px;height:252px;object-fit:contain;border-radius:11px;border:3px solid #826a51;background:#28363b}
+.portrait-button{display:block;width:252px;height:252px;align-self:start}
+.speaker{font-size:14px}
+/* Vorlese-Leiste */
+.audio-panel{max-width:1140px;margin:16px auto 0;padding:14px 18px;display:flex;flex-wrap:wrap;gap:12px 16px;align-items:center;background:#182b30;border:1px solid #5d8378;border-radius:13px;box-shadow:0 10px 25px #0003}
+.audio-title{display:flex;align-items:center;gap:9px;font-weight:750;color:#dbeadf;white-space:nowrap;letter-spacing:.03em}
+.audio-actions{display:flex;gap:7px;flex-wrap:wrap}
+.audio-btn{border:1px solid #688f82;background:#30554b;border-radius:8px;color:#f0f7f1;padding:8px 12px;font-weight:700;font-size:13px}
+.audio-btn:hover{background:#477164}.audio-btn:disabled{opacity:.38;cursor:not-allowed}
+.audio-settings{display:flex;align-items:center;gap:7px;flex-wrap:wrap;font-size:13px;color:#d8ded6}
+.audio-settings label{white-space:nowrap}
+.audio-settings select{border:1px solid #577a70;color:#f4eee0;background:#213b40;border-radius:7px;font:inherit;padding:7px;max-width:210px}
+.audio-settings .auto{display:flex;align-items:center;gap:6px;cursor:pointer}
+.audio-settings .auto input{accent-color:#89dac4;width:16px;height:16px}
+.audio-status{color:#abccbf;font-size:12px;min-width:125px;flex:1 1 145px;text-align:right}
+.speaking-block{outline:3px solid #569b8d66;outline-offset:4px;background-color:#8bc3a21c;border-radius:7px}
+.narration.speaking-block{padding:2px 8px}
+@media(max-width:700px){.dialogue{grid-template-columns:minmax(0,1fr);gap:12px;padding:14px}.portrait-button{width:212px;height:212px;max-width:100%;justify-self:center}.portrait{width:212px;height:212px;max-width:100%}.audio-panel{margin:8px 9px 0;padding:12px;gap:10px}.audio-status{text-align:left}.audio-settings select{max-width:170px}}
+@media(max-width:390px){.portrait-button,.portrait{width:195px;height:195px}.audio-settings select{max-width:146px}}
+
+
+/* Rollenstimmen-Einstellungen */
+.casting-grid{display:grid;gap:12px;margin-top:18px}.casting-row{display:grid;grid-template-columns:minmax(165px,1fr) minmax(190px,1.2fr) auto;gap:12px;align-items:center;background:#243a3f;padding:12px;border:1px solid #587269;border-radius:10px}.casting-row strong{display:block;color:#ead4a8}.casting-row small{display:block;color:#b8cec6}.casting-row select{width:100%;min-width:0;background:#132c31;border:1px solid #719386;border-radius:7px;padding:10px;color:#fff}.casting-row .audio-btn{white-space:nowrap}@media(max-width:670px){.casting-row{grid-template-columns:1fr auto}.casting-row select{grid-column:1 / -1;grid-row:2}.casting-row .audio-btn{grid-column:2;grid-row:1}}
+</style>
+</head>
+<body>
+<header class="top"><div class="top-inner">
+ <div class="brand"><span class="brand-symbol" aria-hidden="true">⚙</span><div><strong>AYGON</strong><small>FORSCHUNGSCHRONIKEN</small></div></div>
+ <nav class="tools" aria-label="Buchfunktionen">
+  <button id="home" class="tool" type="button" title="Titelblatt">⌂ Start</button>
+  <button id="toc" class="tool" type="button">☷ Kapitel</button>
+  <button id="cast" class="tool" type="button">♟ Figuren</button>
+  <button id="text-toggle" class="tool" type="button" aria-pressed="false">🖼 Bilder: an</button>
+  <button id="size-button" class="tool" type="button">A± Schrift 100%</button>
+ </nav>
+</div><div class="progress" aria-hidden="true"><div id="progress-bar"></div></div></header>
+
+<section class="audio-panel" aria-label="Vorlesefunktion">
+ <div class="audio-title">🔊 Geschichte anhören</div>
+ <div class="audio-actions">
+  <button class="audio-btn" id="read-start" type="button">▶ Vorlesen</button>
+  <button class="audio-btn" id="read-pause" type="button" disabled>⏸ Pause</button>
+  <button class="audio-btn" id="read-stop" type="button" disabled>■ Stopp</button>
+ </div>
+ <div class="audio-settings">
+  <label for="voice-choice">Stimme</label><select id="voice-choice" aria-label="Stimme auswählen"><option value="">Systemstimme</option></select>
+  <label for="speed-choice">Tempo</label><select id="speed-choice" aria-label="Vorlesetempo"><option value="0.85">Ruhig</option><option value="1" selected>Normal</option><option value="1.15">Flott</option></select>
+  <label class="auto" for="auto-next"><input id="auto-next" type="checkbox" checked>Alle Seiten lesen</label>
+ </div>
+ <button class="audio-btn" id="cast-settings" type="button">🎭 Rollenstimmen einstellen</button>
+ <label class="auto" style="display:flex;gap:7px;align-items:center;font-size:13px"><input type="checkbox" id="cast-mode" checked> Hörspielmodus</label>
+ <button class="audio-btn" id="jump-demo" type="button">▶ Hörspielprobe öffnen</button>
+ <div class="audio-status" id="audio-status" role="status" aria-live="polite">Bereit zum Vorlesen</div>
+</section>
+
+<main class="shell">
+ <article class="book" aria-label="Interaktives Aygon-Bilderbuch"><div id="content" class="book-page" aria-live="polite"></div></article>
+ <nav class="leaf-nav" aria-label="Seiten navigation"><button id="prev" type="button">← Zurück</button><span id="page-count" class="page-count"></span><button id="next" type="button">Buch öffnen →</button></nav>
+</main>
+<div id="overlay" class="dialog-overlay" role="dialog" aria-modal="true" aria-label="Buchansicht"><div class="modal"><button id="modal-close" class="close" aria-label="Fenster schließen">✕ Schließen</button><div id="modal-content"></div></div></div>
+<script>
+const PAGES = [{"chapter":"Prolog","title":"Ein ungewöhnlich ruhiger Morgen","subtitle":"Wenn sechs Fachleute eine Forschungsanlage betreten ...","blocks":[{"type":"narration","text":"Tief unter der Minecraft-Welt, verborgen zwischen mächtigen Gesteinsschichten, liegt eine Forschungsanlage, in der Wissenschaft, Magie und handwerklicher Einfallsreichtum aufeinandertreffen."},{"type":"narration","text":"Es ist ein ungewöhnlich ruhiger Morgen. Die Maschinen stehen still, die Öfen knistern leise, und irgendwo tropft Wasser in einen Eimer. Professor Kupferstein sitzt an seinem Schreibtisch und blättert in den Aufzeichnungen der letzten Forschungsarbeiten."},{"type":"dialogue","speaker":"kupferstein","lines":["Meine Herren, ich möchte daran erinnern, dass wissenschaftlicher Fortschritt auf sorgfältiger Dokumentation beruht.","Unser Cobblestone-Generator funktioniert, Fäden und Eisengitter wurden beschafft. Als weitere Arbeitspunkte stehen Netherziegel und der Erzbrecher auf unseren Unterlagen."]},{"type":"narration","text":"Ein lautes metallisches Scheppern unterbricht ihn. Aus Richtung der Werkstatt ertönt eine Stimme, die selbst durch drei Steinwände noch deutlich zu hören wäre."},{"type":"dialogue","speaker":"roehrig","lines":["ECKAAAART! Sach ma, wo haste denn meinen großen Schraubenschlüssel hingelegt?! Ich hab dir doch gesacht, dat Werkzeug gehört ordentlich an die Wand!"]},{"type":"dialogue","speaker":"eckart","lines":["Aber Meister, den ham Sie doch selber inne Hand!"]},{"type":"narration","text":"Kurze Stille. Dann noch längere Stille."},{"type":"dialogue","speaker":"eckart","lines":["Meister?","Soll ich Ihnen trotzdem einen suchen?"]},{"type":"narration","text":"Professor Kupferstein nimmt seine Brille ab, putzt sie langsam und schreibt wortlos etwas in sein Notizbuch."}]},{"chapter":"Prolog","title":"Der Alles-wird-ordentlich-INATOR","subtitle":"Über Ordnung lässt sich streiten. Über Erfindungen erst recht.","blocks":[{"type":"narration","text":"In diesem Augenblick schlendert Werner in die Werkstatt. Er betrachtet das Durcheinander, grinst und lehnt sich an eine Werkbank."},{"type":"dialogue","speaker":"werner","lines":["Mensch, Röhrig! Wat brüllste denn hier so rum? Is doch noch früh am Tach!","Und du, Eckart, lass den Meister man suchen. Bewegung hält jung, nä?"]},{"type":"narration","text":"Plötzlich ertönt aus dem angrenzenden Forschungstrakt ein triumphierender Ruf."},{"type":"dialogue","speaker":"doofen","lines":["BEHOLD! Meine neueste Erfindung! Der absolut revolutionäre, wissenschaftlich nahezu perfekte ...","Ähm ... Moment. Wie hatte ich ihn noch mal genannt?"]},{"type":"narration","text":"Er dreht einen zerknitterten Zettel um."},{"type":"dialogue","speaker":"doofen","lines":["AH, JA! Der Alles-wird-endlich-ordentlich-sortiert-INATOR!","Mit diesem genialen Apparat werde ich sämtliche Unordnung in dieser Forschungsanlage beseitigen! Und danach erobere ich natürlich die gesamte Tri-State-Area! HAHAHA!"]},{"type":"narration","text":"Meister Röhrig schaut Werner an. Werner schaut Eckart an. Eckart schaut auf den Schraubenschlüssel in Röhrigs Hand. Professor Kupferstein legt seinen Füllfederhalter zur Seite. Niemand sagt ein Wort."},{"type":"narration","text":"Dann kommt aus einer dunklen Ecke des Labors ein tiefes, theatralisches Räuspern."},{"type":"dialogue","speaker":"huibuh","lines":["HÖHÖHÖ! Bei sämtlichen rostigen Ritterrüstungen meiner Ahnen! Ein Gerät, das Ordnung schafft? In DIESEM Labor?","Mein lieber Doktor, da wäre selbst die königliche Schlossverwaltung überfordert!","Und ich hoffe INSTÄNDIG, dass dieses Ding nicht wieder explodiert. Meine letzte Geisterrobe riecht noch immer nach verkohltem Redstone!"]},{"type":"narration","text":"Dr. Doofenshmirtz öffnet empört den Mund. Werner beginnt zu lachen. Eckart versucht unauffällig, den Schraubenschlüssel aus Meister Röhrigs Hand zu nehmen. Der Meister bemerkt es."},{"type":"dialogue","speaker":"roehrig","lines":["ECKART! NU LASS DOCH MAL MEIN WERKZEUG IN RUHE!"]},{"type":"dialogue","speaker":"eckart","lines":["Aber Meister, Sie ham doch gerade ...","Ja, Meister."]}]},{"chapter":"Prolog","title":"Ein Augenblick der Ruhe","subtitle":"Die wissenschaftliche Disziplin hält vier Sekunden.","blocks":[{"type":"narration","text":"Professor Kupferstein steht auf. Er geht langsam zum großen Forschungstisch, legt sein Notizbuch darauf und schaut der Reihe nach in die Gesichter seiner Kollegen."},{"type":"dialogue","speaker":"kupferstein","lines":["Meine Herren."]},{"type":"narration","text":"Niemand reagiert."},{"type":"dialogue","speaker":"kupferstein","lines":["MEINE HERREN!"]},{"type":"narration","text":"Schlagartig verstummen alle."},{"type":"dialogue","speaker":"kupferstein","lines":["Wir haben hier eine bemerkenswerte Forschungsanlage. Wir haben Materialien, Werkzeuge, Maschinen und eine ganze Welt voller ungelöster Fragen.","Was wir allerdings dringend benötigen, ist ein Mindestmaß an wissenschaftlicher Disziplin."]},{"type":"narration","text":"Doofenshmirtz hebt vorsichtig einen Finger."},{"type":"dialogue","speaker":"doofen","lines":["Gilt das auch für meine Inatoren?"]},{"type":"dialogue","speaker":"kupferstein","lines":["GANZ BESONDERS für Ihre Inatoren!"]},{"type":"narration","text":"Hui Buh beginnt lautlos zu kichern. Werner setzt sich auf eine Kiste. Eckart findet endlich einen freien Platz für seinen Schraubenschlüssel. Meister Röhrig kontrolliert misstrauisch, ob dieser auch ordentlich liegt."},{"type":"narration","text":"Professor Kupferstein schlägt das Forschungsbuch auf der nächsten freien Seite auf. Mit sorgfältiger Handschrift setzt er eine neue Überschrift darunter: „Aygon-Forschungschroniken: Die nächsten Entdeckungen“."},{"type":"narration","text":"Sechs höchst unterschiedliche Gestalten versammeln sich um den Tisch. Und zum ersten Mal an diesem Morgen herrscht tatsächlich Stille. Jedenfalls für ungefähr vier Sekunden."},{"type":"dialogue","speaker":"eckart","lines":["Meister?"]},{"type":"dialogue","speaker":"roehrig","lines":["WAT DENN NU SCHON WIEDER, ECKART?!"]},{"type":"dialogue","speaker":"eckart","lines":["Wer macht eigentlich Kaffee?"]},{"type":"end","text":"Fortsetzung folgt ..."}]},{"chapter":"Hörspiel-Test","title":"Die Sache mit dem Schraubenschlüssel","subtitle":"Ein kurzer Stimmtest mit unserem Forschungsteam · keine neue Forschung","blocks":[{"type":"narration","text":"Ein leises Klirren hallt durch die Werkstatt. Meister Röhrig starrt auf den Arbeitstisch. Eckart steht neben ihm und versucht, möglichst unschuldig auszusehen."},{"type":"dialogue","speaker":"roehrig","lines":["ECKART! Wo is denn nu schon wieder mein Schraubenschlüssel?!"]},{"type":"dialogue","speaker":"eckart","lines":["Aber Meister, den ham Sie doch inner Hand!"]},{"type":"narration","text":"Werner lehnt sich grinsend gegen eine Kiste. Professor Kupferstein hebt langsam den Blick von seinen Unterlagen."},{"type":"dialogue","speaker":"werner","lines":["Jau, Röhrig. Manchmal is dat Werkzeug näher als man denkt!"]},{"type":"dialogue","speaker":"kupferstein","lines":["Meine Herren, könnten wir wenigstens einen einzigen Morgen ohne Werkzeugdiskussion beginnen?"]},{"type":"dialogue","speaker":"doofen","lines":["Ausgezeichnet! Dann stelle ich euch meinen völlig neuen Schraubenschlüssel-Such-INATOR vor!"]},{"type":"dialogue","speaker":"huibuh","lines":["HÖHÖHÖ! Bei meinen klappernden Ritterrüstungen! Hier braucht man wahrlich keine Geister, um Dinge verschwinden zu lassen!"]},{"type":"narration","text":"Eckart betrachtet den Schlüssel in der Hand des Meisters. Werner lacht leise. Für einen Augenblick herrscht Frieden im Labor."},{"type":"end","text":"Ende der Hörspielprobe"}]}];
+const CAST = {"kupferstein":{"name":"Prof. Kupferstein","img":"bilder/prof_kupferstein.webp"},"roehrig":{"name":"Meister Röhrig","img":"bilder/meister_roehrig.webp"},"eckart":{"name":"Eckart","img":"bilder/eckart.webp"},"werner":{"name":"Werner","img":"bilder/werner.webp"},"doofen":{"name":"Dr. Doofenshmirtz","img":"bilder/dr_doofenshmirtz.webp"},"huibuh":{"name":"Hui Buh","img":"bilder/hui_buh.webp"}};
+let current = -1;
+let portraitsVisible = true;
+let fontScale = 1;
+const root = document.getElementById('content');
+const textToggle=document.getElementById('text-toggle');
+const settingsSize=document.getElementById('size-button');
+const overlay=document.getElementById('overlay');
+const modalContents=document.getElementById('modal-content');
+function elt(tag, cls, text) { const el=document.createElement(tag); if(cls)el.className=cls; if(text!==undefined)el.textContent=text;return el; }
+function add(parent,...children){ for(const child of children)parent.appendChild(child);return parent;}
+function openModal(content){modalContents.replaceChildren(content);overlay.classList.add('open');document.body.style.overflow='hidden';document.getElementById('modal-close').focus()}
+function closeModal(){overlay.classList.remove('open');document.body.style.overflow=''}
+function portraitModal(key){const person=CAST[key];if(!person)return; const div=elt('div','lightbox');const img=elt('img');img.src=person.img;img.alt='Originalporträt von '+person.name;add(div,img,elt('p','',person.name));openModal(div)}
+function addNarration(parent,text){parent.appendChild(elt('p','narration',text))}
+function addDialogue(parent,block){const person=CAST[block.speaker];if(!person)return;
+ const card=elt('section','dialogue');const btn=elt('button','portrait-button');btn.type='button';btn.setAttribute('aria-label','Porträt von '+person.name+' vergrößern');const img=elt('img','portrait');img.src=person.img;img.alt=person.name;img.width=252;img.height=252;img.loading='eager';img.decoding='async';btn.appendChild(img);btn.addEventListener('click',()=>portraitModal(block.speaker));
+ const right=elt('div');add(right,elt('div','speaker',person.name));const speech=elt('div','speech');block.lines.forEach(line=>speech.appendChild(elt('p','',line)));right.appendChild(speech);add(card,btn,right);parent.appendChild(card);
+}
+function updateChrome(){ document.getElementById('progress-bar').style.width=((current+1)/(PAGES.length+1)*100)+'%';document.getElementById('prev').disabled=current<0;document.getElementById('next').disabled=current>=PAGES.length-1;document.getElementById('next').textContent=current===-1?'Buch öffnen →':current===PAGES.length-1?'Ende des Prologs':'Weiter →';document.getElementById('page-count').textContent=current===-1?'Titelblatt':`Seite ${current+1} von ${PAGES.length}`;}
+function render(){root.replaceChildren();
+ if(current===-1){const cover=elt('section','cover');const wrap=elt('div');add(wrap,elt('div','cover-mark','✧'),elt('span','ribbon','BAND I  ·  DER PROLOG'),elt('h1','', 'Aygon'),elt('div','cover-sub','Forschungschroniken'),elt('div','ornament','✦'),elt('p','deck','Sechs Spezialisten. Ein unterirdisches Labor. Eine Sammlung höchst ungewöhnlicher Forschungsabenteuer, bei denen wissenschaftliche Disziplin manchmal nur vier Sekunden hält.'));const b=elt('button','big-button','Die Geschichte beginnen');b.onclick=()=>go(0);wrap.appendChild(b);wrap.appendChild(elt('small','','Interaktives Leseexemplar · Alle Bilder lokal · Keine Internetverbindung nötig'));cover.appendChild(wrap);root.appendChild(cover);}
+ else {const page=PAGES[current];add(root,elt('div','eyebrow',page.chapter+'  /  Seite '+(current+1)),elt('h1','chapter-title',page.title),elt('p','subtitle',page.subtitle),elt('div','ornament','✦'));
+ for(const b of page.blocks){if(b.type==='narration')addNarration(root,b.text);else if(b.type==='dialogue')addDialogue(root,b);else if(b.type==='end')root.appendChild(elt('div','finish',b.text));}
+ const footer=elt('div','page-foot');add(footer,elt('span','','AYGON · EINE REISE DURCH DIE ZEIT'),elt('span','','Fiktive Rahmenszene · Keine neuen Versuchsergebnisse'));root.appendChild(footer);
+ }
+ updateChrome();window.scrollTo({top:0,behavior:'smooth'});
+}
+function go(page){stopReading();current=Math.min(PAGES.length-1,Math.max(-1,page));render();updateAudioButtons();}
+document.getElementById('prev').onclick=()=>go(current-1);
+document.getElementById('next').onclick=()=>current<PAGES.length-1&&go(current+1);
+document.getElementById('home').onclick=()=>go(-1);
+document.getElementById('toc').onclick=()=>{const list=elt('div','index-list');const cover=elt('button','index-item');add(cover,elt('span','index-num','0'),elt('span','','Titelblatt'));cover.onclick=()=>{closeModal();go(-1)};list.appendChild(cover);PAGES.forEach((p,i)=>{const b=elt('button','index-item');const t=elt('span');add(t,elt('strong','',p.title),elt('small','',p.subtitle));add(b,elt('span','index-num',String(i+1)),t);b.onclick=()=>{closeModal();go(i)};list.appendChild(b)});const out=elt('div');add(out,elt('h2','','Inhaltsverzeichnis'),list);openModal(out)};
+document.getElementById('cast').onclick=()=>{const out=elt('div');out.appendChild(elt('h2','','Unsere Forschungsgruppe'));const grid=elt('div','cast-grid');for(const [key,p]of Object.entries(CAST)){const card=elt('button','cast-card');const img=elt('img');img.src=p.img;img.alt=p.name;img.loading='lazy';add(card,img,elt('strong','',p.name));card.onclick=()=>portraitModal(key);grid.appendChild(card)}out.appendChild(grid);openModal(out)};
+textToggle.onclick=()=>{portraitsVisible=!portraitsVisible;document.body.classList.toggle('view-text',!portraitsVisible);textToggle.textContent=portraitsVisible?'🖼 Bilder: an':'▤ Bilder: aus';textToggle.setAttribute('aria-pressed',String(!portraitsVisible));};
+settingsSize.onclick=()=>{fontScale=fontScale===1?1.15:fontScale===1.15?1.3:1;document.documentElement.style.setProperty('--font-scale',fontScale);settingsSize.textContent='A± Schrift '+Math.round(fontScale*100)+'%';};
+document.getElementById('modal-close').onclick=closeModal;
+overlay.addEventListener('click',ev=>{if(ev.target===overlay)closeModal()});
+document.addEventListener('keydown',ev=>{if(ev.key==='Escape'){closeModal();return}if(overlay.classList.contains('open'))return;if(ev.key==='ArrowRight'&&current<PAGES.length-1)go(current+1);if(ev.key==='ArrowLeft'&&current>=0)go(current-1)});
+render();
+
+// Vorlesefunktion: Browser-Sprachausgabe, keine externe Bibliothek.
+const synthesisSupported=('speechSynthesis' in window) && ('SpeechSynthesisUtterance' in window);
+const speakEngine=synthesisSupported?window.speechSynthesis:null;
+const readButton=document.getElementById('read-start');
+const pauseButton=document.getElementById('read-pause');
+const stopButton=document.getElementById('read-stop');
+const voiceChoice=document.getElementById('voice-choice');
+const speedChoice=document.getElementById('speed-choice');
+const autoNext=document.getElementById('auto-next');
+const speechStatus=document.getElementById('audio-status');
+// Lokaler Hörspielmodus: vorhandene deutsche Stimmen, pro Rolle unterschiedliche Klangfarben.
+const CAST_PROFILES={
+ narrator:{name:'Erzähler',pitch:1,rate:.92,prefer:'warm',gender:'neutral'},
+ kupferstein:{name:'Prof. Kupferstein',pitch:.93,rate:.91,prefer:'m',gender:'male'},
+ roehrig:{name:'Meister Röhrig',pitch:.81,rate:1.02,prefer:'m',gender:'male'},
+ eckart:{name:'Eckart',pitch:1.17,rate:1.07,prefer:'m',gender:'male'},
+ werner:{name:'Werner',pitch:.92,rate:1.12,prefer:'m',gender:'male'},
+ doofen:{name:'Dr. Doofenshmirtz',pitch:1.23,rate:1.12,prefer:'m',gender:'male'},
+ huibuh:{name:'Hui Buh',pitch:.84,rate:.88,prefer:'m',gender:'male'}
+};
+const roleChoices={};
+const roleHints={narrator:'Warm, ruhig',kupferstein:'Sachlich, bedacht',roehrig:'Kernig und laut',eckart:'Jugendlich, etwas nervös',werner:'Locker und flott',doofen:'Aufgedreht und exzentrisch',huibuh:'Tief und theatralisch'};
+const castMode=document.getElementById('cast-mode');
+function germanVoices(){return lastVoiceList.filter(v=>/^de(?:-|$)/i.test(v.lang))}
+function voiceForRole(key){
+ const available=germanVoices();const chosen=lastVoiceList.find(v=>v.voiceURI===roleChoices[key]);
+ if(chosen)return chosen;
+ const basic=lastVoiceList.find(v=>v.voiceURI===voiceChoice.value);
+ if(!available.length)return basic||null;
+ const idx={narrator:0,kupferstein:1,roehrig:2,eckart:3,werner:4,doofen:5,huibuh:6}[key]||0;
+ return available[idx%available.length];
+}
+function openCasting(){
+ const modal=elt('div');add(modal,elt('h2','','🎭 Rollenbesetzung'),elt('p','','Für jede Figur kannst du eine verfügbare deutsche Browserstimme wählen. Auch bei nur einer Stimme unterscheiden sich Tonhöhe und Tempo. Das sind keine aufgenommenen Synchronstimmen.'));
+ const voices=germanVoices();
+ if(!voices.length)modal.appendChild(elt('p','','Keine deutschen Stimmen erkannt. Die Systemstimme wird verwendet.'));
+ const list=elt('div','casting-grid');
+ for(const [key,profile] of Object.entries(CAST_PROFILES)){
+  const row=elt('div','casting-row'); const left=elt('div');add(left,elt('strong','',profile.name),elt('small','',roleHints[key]));
+  const sel=elt('select');sel.setAttribute('aria-label','Stimme für '+profile.name);
+  sel.appendChild(new Option('Automatische Besetzung',''));
+  for(const voice of voices)sel.appendChild(new Option(`${voice.name} (${voice.lang})`,voice.voiceURI));
+  sel.value=roleChoices[key]||'';
+  sel.addEventListener('change',()=>{roleChoices[key]=sel.value});
+  const preview=elt('button','audio-btn','▶ Test');preview.type='button';preview.onclick=()=>{
+    if(!speakEngine)return;stopReading();
+    const ut=new SpeechSynthesisUtterance(key==='narrator'?'Tief unter der Minecraft-Welt liegt das Aygon-Forschungslabor.':key==='roehrig'?'Eckart! Wo ist denn mein Schraubenschlüssel?':key==='eckart'?'Aber Meister, den ham Sie doch in der Hand!':key==='huibuh'?'Bei meinen klappernden Ritterrüstungen!':`Guten Morgen! Hier spricht ${profile.name}.`);
+    const picked=voiceForRole(key);if(picked){ut.voice=picked;ut.lang=picked.lang}else ut.lang='de-DE';
+    ut.pitch=profile.pitch;ut.rate=profile.rate*(parseFloat(speedChoice.value)||1);
+    speakEngine.speak(ut);
+  };
+  add(row,left,sel,preview);list.appendChild(row)
+ }
+ modal.appendChild(list);openModal(modal);
+}
+document.getElementById('cast-settings').onclick=openCasting;
+document.getElementById('jump-demo').onclick=()=>go(PAGES.length-1);
+let speechSession=0, speechItems=[], speechCursor=0, speechRunning=false, speechPaused=false, lastVoiceList=[];
+function setAudioStatus(text){speechStatus.textContent=text}
+function clearSpeaking(){document.querySelectorAll('.speaking-block').forEach(el=>el.classList.remove('speaking-block'))}
+function updateAudioButtons(){
+ readButton.disabled=!synthesisSupported||current<0;
+ pauseButton.disabled=!synthesisSupported||!speechRunning;
+ stopButton.disabled=!synthesisSupported||!speechRunning;
+ pauseButton.textContent=speechPaused?'▶ Fortsetzen':'⏸ Pause';
+ readButton.textContent=speechRunning?'↻ Neu vorlesen':'▶ Vorlesen';
+}
+function stopReading(){
+ speechSession++; speechRunning=false;speechPaused=false;speechItems=[];speechCursor=0;
+ if(speakEngine){try{speakEngine.cancel()}catch(error){}}
+ clearSpeaking();setAudioStatus(synthesisSupported?'Bereit zum Vorlesen':'Keine Sprachausgabe verfügbar');updateAudioButtons();
+}
+function populateVoices(){
+ if(!speakEngine)return;
+ const all=speakEngine.getVoices();
+ if(!all.length){voiceChoice.replaceChildren(new Option('Systemstimme (automatisch)',''));return}
+ lastVoiceList=all;
+ const prev=voiceChoice.value;
+ const sorted=[...all].sort((a,b)=>{const aDe=a.lang.toLowerCase().startsWith('de')?0:1;const bDe=b.lang.toLowerCase().startsWith('de')?0:1;return aDe-bDe||a.name.localeCompare(b.name)});
+ voiceChoice.replaceChildren(...sorted.map(v=>new Option(`${v.name} (${v.lang})`,v.voiceURI)));
+ let chosen=sorted.find(v=>v.voiceURI===prev) || sorted.find(v=>v.lang.toLowerCase()==='de-de') || sorted.find(v=>v.lang.toLowerCase().startsWith('de')) || sorted[0];
+ voiceChoice.value=chosen.voiceURI;
+}
+function collectSpeechItems(){
+ const out=[];
+ // Die visuellen Abschnitte liefern die Reihenfolge. Jedes Sprecherporträt bleibt im Text sichtbar.
+ for(const el of root.querySelectorAll('.narration,.dialogue')){
+   if(el.classList.contains('narration')){out.push({element:el,text:el.textContent.trim(),role:"narrator"})}
+   else{
+     const who=el.querySelector('.speaker')?.textContent.trim()||'';
+     const words=[...el.querySelectorAll('.speech p')].map(x=>x.textContent.trim()).filter(Boolean).join(' ');
+     out.push({element:el,text:words,role:el.querySelector(".speaker")?.textContent.trim()===CAST.kupferstein.name?"kupferstein":Object.keys(CAST).find(key=>CAST[key].name===who)||"narrator",who});
+   }
+ }
+ return out.filter(item=>item.text);
+}
+function speakNext(session){
+ if(session!==speechSession||!speechRunning)return;
+ clearSpeaking();
+ if(speechCursor>=speechItems.length){
+    const shouldContinue=autoNext.checked&&current<PAGES.length-1;
+    speechRunning=false; speechPaused=false;
+    if(shouldContinue){go(current+1);playReading();return}
+    setAudioStatus('Seite vollständig vorgelesen');updateAudioButtons();return;
+ }
+ const item=speechItems[speechCursor];
+ item.element.classList.add('speaking-block');
+ // Leseabschnitt nur dann sichtbar machen, wenn er außerhalb des Fensters liegt.
+ const rect=item.element.getBoundingClientRect();
+ if(rect.bottom>window.innerHeight-40||rect.top<85)item.element.scrollIntoView({behavior:'smooth',block:'center'});
+ const utterance=new SpeechSynthesisUtterance(item.text);
+ utterance.lang='de-DE';utterance.rate=parseFloat(speedChoice.value)||1;utterance.pitch=1;utterance.volume=1;
+ const profile=CAST_PROFILES[item.role]||CAST_PROFILES.narrator;
+ const chosen=castMode.checked?voiceForRole(item.role):lastVoiceList.find(v=>v.voiceURI===voiceChoice.value);
+ if(castMode.checked){utterance.pitch=profile.pitch;utterance.rate=(parseFloat(speedChoice.value)||1)*profile.rate;}
+ if(chosen){utterance.voice=chosen;utterance.lang=chosen.lang;}
+ utterance.onstart=()=>{if(session!==speechSession)return;setAudioStatus(`Abschnitt ${speechCursor+1} von ${speechItems.length}`)};
+ utterance.onend=()=>{if(session!==speechSession)return;speechCursor++;speakNext(session)};
+ utterance.onerror=(event)=>{
+   if(session!==speechSession)return;
+   if(event.error==='canceled'||event.error==='interrupted')return;
+   speechRunning=false;speechPaused=false;clearSpeaking();updateAudioButtons();setAudioStatus('Sprachausgabe fehlgeschlagen: '+(event.error||'unbekannter Fehler'));
+ };
+ try{speakEngine.speak(utterance)}catch(err){speechRunning=false;clearSpeaking();updateAudioButtons();setAudioStatus('Sprachausgabe konnte nicht starten')}
+}
+function playReading(){
+ if(!synthesisSupported){setAudioStatus('Dieser Browser unterstützt keine Vorlesefunktion');return}
+ if(current<0){go(0)}
+ stopReading();
+ // Eine deutsche Stimme kann auch erst nach dem Laden des Buchs erscheinen.
+ populateVoices();
+ speechItems=collectSpeechItems();speechCursor=0;
+ if(!speechItems.length){setAudioStatus('Auf dieser Seite gibt es keinen Vorlesetext');return}
+ speechRunning=true;speechPaused=false;const session=speechSession;
+ updateAudioButtons();setAudioStatus('Vorlesen wird gestartet …');speakNext(session);
+}
+readButton.addEventListener('click',playReading);
+pauseButton.addEventListener('click',()=>{
+ if(!speechRunning||!speakEngine)return;
+ if(speechPaused){speakEngine.resume();speechPaused=false;setAudioStatus('Vorlesen fortgesetzt')}
+ else{speakEngine.pause();speechPaused=true;setAudioStatus('Vorlesen pausiert')}
+ updateAudioButtons();
+});
+stopButton.addEventListener('click',stopReading);
+if(speakEngine){populateVoices();if(speakEngine.addEventListener)speakEngine.addEventListener('voiceschanged',populateVoices)}
+else{setAudioStatus('Sprachausgabe hier nicht verfügbar');voiceChoice.disabled=true;speedChoice.disabled=true;autoNext.disabled=true}
+updateAudioButtons();
+
+</script>
+</body>
+</html>
